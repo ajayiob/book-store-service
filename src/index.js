@@ -26,32 +26,6 @@ app.get("/*",(req, res) => {
     })
 });
 
-app.post("/*",(req, res) => {
-    const param = req.params[0] || 'search';
-    debugger;
-    request({url:`${bookServiceURL}${param}`},(error, response) => {
-        debugger;
-        if(error){
-            res.send(error);
-        }else {
-            res.send(response.body);
-        }
-    })
-});
-
-app.put("/*",(req, res) => {
-    const param = req.params[0] || 'search';
-    debugger;
-    request({url:`${bookServiceURL}${param}`},(error, response) => {
-        debugger;
-        if(error){
-            res.send(error);
-        }else {
-            res.send(response.body);
-        }
-    })
-});
-
 app.listen(port, () => {
     console.log('Application is running on port ', port);
 })
